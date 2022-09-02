@@ -1,12 +1,11 @@
-
-import React from "react";
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,
-  Routes
-} from "react-router-dom";
+  Routes,
+} from 'react-router-dom';
 
 export default function App() {
   return (
@@ -29,9 +28,7 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Routes>
-          <Route path="/about">
-            <About />
-          </Route>
+          <Route path="/about" element={<About />}></Route>
           <Route path="/users">
             <Users />
           </Route>
@@ -55,9 +52,3 @@ function About() {
 function Users() {
   return <h2>Users</h2>;
 }
-
-    
-  
-
-
-export default App
